@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login con Arrow Function</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"><i class="fas fa-code"></i></div>
+    <header>
+      <h1>Diferencia entre Function y Arrow Function</h1>
+      <p>Las funciones tradicionales y las Arrow Functions tienen diferencias importantes en sintaxis, manejo de <code>this</code>, uso como constructores y acceso al objeto <code>arguments</code>. Aquí te mostramos un resumen ampliado:</p>
+    </header>
+
+    <section class="info">
+      <h2>Comparación detallada</h2>
+      <table>
+        <tr>
+          <th>Aspecto</th>
+          <th>Function tradicional</th>
+          <th>Arrow Function</th>
+        </tr>
+        <tr>
+          <td>Sintaxis</td>
+          <td>function nombre(){...}</td>
+          <td>() => {...}</td>
+        </tr>
+        <tr>
+          <td>Manejo de <code>this</code></td>
+          <td>Dinámico, depende de la invocación</td>
+          <td>Léxico, hereda del contexto</td>
+        </tr>
+        <tr>
+          <td>Uso como constructor</td>
+          <td>Sí, con <code>new</code></td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Objeto <code>arguments</code></td>
+          <td>Disponible</td>
+          <td>No disponible, se usa <code>...args</code></td>
+        </tr>
+        <tr>
+          <td>Hoisting</td>
+          <td>Se puede invocar antes de declararse</td>
+          <td>No se eleva, debe declararse antes</td>
+        </tr>
+        <tr>
+          <td>Uso típico</td>
+          <td>Métodos, constructores, funciones complejas</td>
+          <td>Callbacks, funciones cortas, programación funcional</td>
+        </tr>
+      </table>
+
+      <h3>Ejemplo comparativo</h3>
+      <pre>
+      // Función tradicional
+      function saludar(nombre) {
+        return "Hola " + nombre;
+      }
+
+      // Arrow Function
+      const saludar = (nombre) => `Hola ${nombre}`;
+      </pre>
+    </section>
+
+    <!-- Formulario -->
+    <div class="card">
+      <h2><i class="fas fa-lock"></i> Formulario de Login</h2>
+      <form onsubmit="login(); return false;">
+        <div class="input-group">
+          <label for="usuario"><i class="fas fa-user"></i> Usuario:</label>
+          <input type="text" id="usuario" placeholder="Ingresa tu usuario">
+        </div>
+        <div class="input-group">
+          <label for="password"><i class="fas fa-key"></i> Contraseña:</label>
+          <input type="password" id="password" placeholder="Ingresa tu contraseña">
+        </div>
+        <button type="submit"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+        <p id="error"></p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Danika Armas</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
